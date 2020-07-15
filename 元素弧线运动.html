@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>元素弧线运动</title>
+  <style>
+    .box {
+      width: 400px;
+      height: 400px;
+      border: 2px solid #ff8800;
+    }
+    span {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #222;
+      animation: center1 2s ease-out forwards;
+    }
+    span:after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background: greenyellow;
+      animation: center2 2s ease-in forwards;
+    }
+    @keyframes center1 {
+      to {
+        transform: translateX(360px)
+      }
+    }
+    @keyframes center2 {
+      to {
+        transform: translateY(360px)
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <span></span>
+  </div>
+</body>
+
+</html>
